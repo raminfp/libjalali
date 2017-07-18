@@ -1,0 +1,56 @@
+Name:          @PACKAGE_RPMNAME@
+Version:       @PACKAGE_RPMVERSION@
+Release:        @RELEASE_VERSION@%{?dist}
+Summary:       pparam library from PDNSoft 
+
+Group:	bugjoo-team
+License:  Pre
+URL:      http://www.bugjoo.ir/
+Source0:   @PACKAGE_RPMNAME@-@PACKAGE_RPMVERSION@.tgz
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+
+#BuildRequires:  
+#Requires:
+       
+%description
+pparam tools
+%package        devel
+Summary:        Headers and libraries for pparam
+Group:          Development/Libraries
+Requires:       %{name} = %{version}-%{release}
+%description	devel
+pparam devel
+%prep
+%setup -q
+
+
+%build
+%configure --prefix=@prefix@ 
+make %{?_smp_mflags}
+
+
+%install
+rm -rf $RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
+
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+
+%files
+%defattr(-,root,root,-)
+@libdir@/libjalali.la
+@libdir@/libjalali.so
+@libdir@/libjalali.so.@MAJOR_VERSION@
+@libdir@/libjalali.so.@VERSION@
+
+%files devel
+%defattr(-,root,root,-)
+@libdir@/pkgconfig/@PACKAGE@.pc
+@includedir@/jalali/jalali.h
+@includedir@/jalali/jalali.tcc
+
+%postun -p /sbin/ldconfig
+
+%changelog

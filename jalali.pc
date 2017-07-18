@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib64
+includedir=/usr/include
+
+Name: libjalali
+Description: Common parameter structures for managing/manipulating XMLs
+URL: https://www.bugjoo.ir
+Requires: libxml++-2.6 uuid openssl
+Version: 1.0
+Libs: -ljalali
+Cflags: -I${includedir}/jalali
