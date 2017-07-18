@@ -17,5 +17,7 @@ int main(){
     
     printf("Current Jalali date with number month: %d %s %d\n", d, j_month_number[m], y);
 
+    printf("Name Week Day : %s\n", NameWeekDays());
+
 	return 0;
 }
