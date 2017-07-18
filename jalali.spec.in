@@ -1,7 +1,7 @@
 Name:          @PACKAGE_RPMNAME@
 Version:       @PACKAGE_RPMVERSION@
-Release:        @RELEASE_VERSION@%{?dist}
-Summary:       pparam library from PDNSoft 
+Release:       @RELEASE_VERSION@%{?dist}
+Summary:       jalali library from SaminRay ICT Co
 
 Group:	bugjoo-team
 License:  Pre
