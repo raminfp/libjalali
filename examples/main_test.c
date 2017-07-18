@@ -14,6 +14,8 @@ int main(){
    	gregorian_to_jalali(&y, &m, &d,1900+br_time->tm_year,1+br_time->tm_mon,br_time->tm_mday);
 
 	printf("Current Jalali date: %d %s %d\n", d, j_month_name[m], y);
+    
+    printf("Current Jalali date with number month: %d %s %d\n", d, j_month_number[m], y);
 
 	return 0;
 }

@@ -25,6 +25,9 @@
 
 /* Changes:
  *
+ * 2017-Jul-18:
+ *	Added j_month_number, by Ramin Farajpour Cami
+ *
  * 2017-Jan-07:
  *	Fixed a bug with change type variabel, by Ramin Farajpour Cami
  *
@@ -62,6 +65,13 @@ const char *j_month_name[13] = {"",
                                 "Tir", "Mordad", "Shahrivar",
                                 "Mehr", "Aban", "Azar",
                                 "Dey", "Bahman", "Esfand"};
+
+const char *j_month_number[13] = {"",
+                                "01", "02", "03",
+                                "04", "05", "06",
+                                "07", "08", "09",
+                                "10", "11", "12"};
+
 
 void gregorian_to_jalali(int *j_y, int *j_m, int *j_d,
                          int  g_y, int  g_m, int  g_d)
