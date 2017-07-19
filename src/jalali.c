@@ -19,25 +19,6 @@
  *
  */
 
-/* Changes:
- *
- * 2017-Jul-18:
- *	Added j_month_number, by Ramin Farajpour Cami
- *
- * 2017-Jan-07:
- *	Fixed a bug with change type variabel, by Ramin Farajpour Cami
- *
- * 2005-Sep-06:
- *      General cleanup  --Behdad Esfahbod
- *
- * 2001-Sep-21:
- *	Fixed a bug with "30 Esfand" dates, reported by Mahmoud Ghandi
- *
- * 2001-Sep-20:
- *	First LGPL release, with both sides of conversions
- */
-
-
 /* implementation */
 
 #include <stdio.h>
