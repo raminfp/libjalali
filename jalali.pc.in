@@ -4,7 +4,7 @@ libdir=@libdir@
 includedir=@includedir@
 
 Name: @PACKAGE_NAME@
-Description: Common parameter structures for managing/manipulating XMLs
+Description: Jalali, a Gregorian to Jalali and inverse date convertor
 URL: https://www.bugjoo.ir
 Requires: libxml++-2.6 uuid openssl
 Version: @PACKAGE_VERSION@
