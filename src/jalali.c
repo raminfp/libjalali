@@ -38,16 +38,6 @@
  */
 
 
-
-/* prototypes */
-
-void gregorian_to_jalali(/* output */ int *j_y, int *j_m, int *j_d,
-                         /*  input */ int  g_y, int  g_m, int  g_d);
-void jalali_to_gregorian(/* output */ int *g_y, int *g_m, int *g_d,
-                         /*  input */ int  j_y, int  j_m, int  j_d);
-
-
-
 /* implementation */
 
 #include <stdio.h>
@@ -176,23 +166,26 @@ void jalali_to_gregorian(int *g_y, int *g_m, int *g_d,
 }
 
 
-char *NameWeekDays(){
+char *fa_nameweekdays(){
 
     int i;
     time_t rawtime;
     struct tm *info;
     char *en_days[7] = {"Mon", "Tue", "Wed", "Thu", "Fri","Sun", "Sat"};
     const char *fa_days[7] = {"2Shanbeh", "3Shanbeh", "4Shanbeh", "5Shanbeh", "Joomeh", "Shanbeh", "1Shanbeh"};
-
+    time( &rawtime );
     info = localtime( &rawtime );
-    strftime(name,4,"%a", info);
-    for (i = 0;i < sizeof(en_days) / sizeof(char); i++){
-        if(strcmp(name, en_days[i]) == 0){
-            memmove(name, fa_days[i], 9);
-            break;
+    strftime(name,20,"%a", info);
+    for (i = 0;i <= sizeof(en_days) / sizeof(char); i++){
+        if (en_days[i] != '\0'){
+            if(strcmp(name, en_days[i]) == 0){
+                memmove(name, fa_days[i], 9);
+                break;
+            }
         }
     }
     return name;
+
 }
 
 
