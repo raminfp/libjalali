@@ -1,5 +1,5 @@
 Name:          jalali
-Version:       1.3.1
+Version:       1.0
 Release:       1%{?dist}
 Summary:       jalali library from SaminRay ICT Co
 
