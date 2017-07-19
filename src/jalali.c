@@ -17,10 +17,6 @@
  * You can receive a copy of GNU Lesser General Public License at the
  * World Wide Web address <http://www.gnu.org/licenses/lgpl.html>.
  *
- * For licensing issues, contact The FarsiWeb Project Group,
- * Computing Center, Sharif University of Technology,
- * PO Box 11365-8515, Tehran, Iran, or contact us the
- * email address <FWPG@sharif.edu>.
  */
 
 /* Changes:
