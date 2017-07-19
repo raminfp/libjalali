@@ -21,7 +21,7 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 LT_INIT([disable-static], [enable-silent-rules])
 AC_PROG_LIBTOOL
 CXXFLAGS="-O0 -g -std=c++0x -Wall"
-CFLAGS="-c -O0 -g -Wall -fPIC"
+CFLAGS="-c -O0 -g -Wall"
 AC_LANG([C++])
 
 PKG_CHECK_MODULES(UUID, uuid)
