@@ -4,7 +4,7 @@ libdir=/usr/lib64
 includedir=/usr/include
 
 Name: libjalali
-Description: Common parameter structures for managing/manipulating XMLs
+Description: Jalali, a Gregorian to Jalali and inverse date convertor
 URL: https://www.bugjoo.ir
 Requires: libxml++-2.6 uuid openssl
 Version: 1.0

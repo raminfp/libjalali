@@ -1,25 +1,25 @@
 Name:          jalali
-Version:       1.0
+Version:       1.0.0
 Release:       1%{?dist}
 Summary:       jalali library from SaminRay ICT Co
 
 Group:	bugjoo-team
 License:  Pre
 URL:      http://www.bugjoo.ir/
-Source0:   jalali-1.3.1.tgz
+Source0:   jalali-1.0.0.tgz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 #BuildRequires:  
 #Requires:
        
 %description
-pparam tools
+jalali tools
 %package        devel
-Summary:        Headers and libraries for pparam
+Summary:        Headers and libraries for jalali
 Group:          Development/Libraries
 Requires:       %{name} = %{version}-%{release}
 %description	devel
-pparam devel
+jalali devel
 %prep
 %setup -q
 
