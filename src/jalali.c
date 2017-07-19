@@ -192,7 +192,7 @@ char *NameWeekDays(){
     strftime(name,4,"%a", info);
     for (i = 0;i < sizeof(en_days) / sizeof(char); i++){
         if(strcmp(name, en_days[i]) == 0){
-            memmove(name, fa_days[i], 10);
+            memmove(name, fa_days[i], 9);
             break;
         }
     }
