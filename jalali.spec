@@ -1,7 +1,7 @@
 Name:          jalali
-Version:       1.3.1
-Release:        1%{?dist}
-Summary:       pparam library from PDNSoft 
+Version:       1.0
+Release:       1%{?dist}
+Summary:       jalali library from SaminRay ICT Co
 
 Group:	bugjoo-team
 License:  Pre

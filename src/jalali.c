@@ -57,7 +57,9 @@ void jalali_to_gregorian(/* output */ int *g_y, int *g_m, int *g_d,
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
+char name[10];
 int g_days_in_month[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 int j_days_in_month[12] = {31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 29};
 const char *j_month_name[13] = {"",
@@ -176,3 +178,25 @@ void jalali_to_gregorian(int *g_y, int *g_m, int *g_d,
    *g_m = gm;
    *g_d = gd;
 }
+
+
+char *NameWeekDays(){
+
+    int i;
+    time_t rawtime;
+    struct tm *info;
+    char *en_days[7] = {"Mon", "Tue", "Wed", "Thu", "Fri","Sun", "Sat"};
+    const char *fa_days[7] = {"2Shanbeh", "3Shanbeh", "4Shanbeh", "5Shanbeh", "Joomeh", "Shanbeh", "1Shanbeh"};
+
+    info = localtime( &rawtime );
+    strftime(name,4,"%a", info);
+    for (i = 0;i < sizeof(en_days) / sizeof(char); i++){
+        if(strcmp(name, en_days[i]) == 0){
+            memmove(name, fa_days[i], 10);
+            break;
+        }
+    }
+    return name;
+}
+
+
