@@ -188,12 +188,11 @@ char *NameWeekDays(){
     char *en_days[7] = {"Mon", "Tue", "Wed", "Thu", "Fri","Sun", "Sat"};
     const char *fa_days[7] = {"2Shanbeh", "3Shanbeh", "4Shanbeh", "5Shanbeh", "Joomeh", "Shanbeh", "1Shanbeh"};
 
-    time( &rawtime );
     info = localtime( &rawtime );
     strftime(name,4,"%a", info);
     for (i = 0;i < sizeof(en_days) / sizeof(char); i++){
         if(strcmp(name, en_days[i]) == 0){
-		    memmove(name, fa_days[i], 10);
+            memmove(name, fa_days[i], 10);
             break;
         }
     }
