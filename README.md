@@ -64,12 +64,12 @@ The next step is building the various binary files. So, enter:
 
 ```shell
 [root@raminfp libjalali]# cd src
-[root@raminfp libjalali]# make
+[root@raminfp src]# make
 ```
 Then login as root and run:
 ```shell
 [root@raminfp libjalali]# cd src
-[root@raminfp libjalali]# make install
+[root@raminfp src]# make install
 ```
 
 
