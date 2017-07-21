@@ -2,6 +2,10 @@
 #include <time.h>
 #include <jalali/jalali.h>
 
+#define MAX_STRING 13
+char DATE1[MAX_STRING];
+
+
 int main(){
 
     int y, m, d;
@@ -18,6 +22,10 @@ int main(){
     printf("Current Jalali date with number month: %d %s %d\n", d, j_month_number[m], y);
 
     printf("Name Week Day : %s\n", fa_nameweekdays());
+    
+    snprintf(DATE1, MAX_STRING, "%d/%s/%d", y,j_month_number[m],d);
+
+    printf("Date now : %s\n",DATE1);
 
     return 0;
 }

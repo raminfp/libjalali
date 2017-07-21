@@ -9,6 +9,10 @@ libjalali is a gregorian to jalali and inverse date convertor for C.
 #include <time.h>
 #include <jalali/jalali.h>
 
+#define MAX_STRING 13
+char DATE1[MAX_STRING];
+
+
 int main(){
 
     int y, m, d;
@@ -25,10 +29,13 @@ int main(){
     printf("Current Jalali date with number month: %d %s %d\n", d, j_month_number[m], y);
 
     printf("Name Week Day : %s\n", fa_nameweekdays());
+    
+    snprintf(DATE1, MAX_STRING, "%d/%s/%d", y,j_month_number[m],d);
+
+    printf("Date now : %s\n",DATE1);
 
     return 0;
 }
-
 ```
 ```bash
 [root@raminfp]# gcc -ljalali test.c -o test
@@ -36,6 +43,7 @@ int main(){
 Current Jalali date: 28 Tir 1396
 Current Jalali date with number month: 28 04 1396
 Name Week Day : 4Shanbeh
+Date now : 1396/04/28
 ```
 
 # Installation
