@@ -152,7 +152,7 @@ char *fa_nameweekdays(){
     int i;
     time_t rawtime;
     struct tm *info;
-    char *en_days[7] = {"Mon", "Tue", "Wed", "Thu", "Fri","Sun", "Sat"};
+    char *en_days[7] = {"Mon", "Tue", "Wed", "Thu", "Fri","Sat", "Sun"};
     const char *fa_days[7] = {"2Shanbeh", "3Shanbeh", "4Shanbeh", "5Shanbeh", "Joomeh", "Shanbeh", "1Shanbeh"};
     time( &rawtime );
     info = localtime( &rawtime );
